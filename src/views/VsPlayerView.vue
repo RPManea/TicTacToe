@@ -1,5 +1,5 @@
 <script setup>
-import VsPlayer from "@/components/VSPlayer.vue";
+import VsPlayer from "@/components/VsPlayer.vue";
 </script>
 
 <template>
