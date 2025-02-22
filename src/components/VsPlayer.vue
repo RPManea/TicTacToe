@@ -20,7 +20,7 @@ const {
 <template>
   <div class="container text-center mt-4">
     <div class="game-wrapper">
-      <!-- 🔹 Marcador -->
+      <!-- Marcador -->
       <Marcador
         :puntosX="puntosX"
         :puntosO="puntosO"
@@ -31,10 +31,10 @@ const {
       <!-- Tablero de juego -->
       <Tablero :tablero="tablero" :jugar="jugar" />
 
-      <!-- 🔹 Contenedor de botones -->
+      <!-- Contenedor de botones -->
       <BotonesJuego :reiniciar-juego="reiniciarJuego" />
 
-      <!-- 🔹 Mensaje de ganador o empate -->
+      <!-- Mensaje de ganador o empate -->
       <div v-if="ganador || empate" class="message-overlay">
         <div class="winner-message" v-if="ganador">
           🎉 ¡El jugador {{ ganador }} ha ganado! 🎉
@@ -79,7 +79,6 @@ const {
 .draw-message {
 } */
 
-/* 🔹 Efecto de brillo */
 @keyframes glow {
   from {
     text-shadow: 0 0 10px #8bc3ff, 0 0 20px #8bc3ff;
