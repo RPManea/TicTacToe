@@ -6,7 +6,7 @@ defineProps({
 </script>
 
 <template>
-  <!-- 🔹 Tablero -->
+  <!-- Tablero -->
   <div class="board mt-5">
     <div
       v-for="(fila, filaIndex) in tablero"
@@ -27,14 +27,14 @@ defineProps({
 </template>
 
 <style scoped>
-/* 🔹 Tablero */
+/* Tablero */
 .board {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
 }
-/* 🔹 Casillas */
+/* Casillas */
 .square {
   width: 150px;
   height: 150px;
@@ -51,7 +51,7 @@ defineProps({
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* 🔹 Estilo para "X" y "O" */
+/* Estilo para "X" y "O" */
 .square[data-symbol="X"] {
   color: #ff3b3b;
   text-shadow: 0 0 10px #ff3b3b, 0 0 20px #ff3b3b;
@@ -62,7 +62,7 @@ defineProps({
   text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
 
-/* 🔹 Responsividad */
+/* Responsividad */
 @media (max-width: 1200px) {
   .square {
     width: 100px;

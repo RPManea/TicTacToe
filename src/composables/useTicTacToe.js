@@ -13,7 +13,7 @@ export function useTicTacToe() {
     reiniciarJuego,
     reiniciarMarcador,
   } = useTicTacToeBase();
-  // Función para jugar
+
   const jugar = (filaIndex, casillaIndex) => {
     if (
       tablero.value[filaIndex][casillaIndex] !== "" ||

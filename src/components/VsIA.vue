@@ -3,6 +3,7 @@ import { useTicTacToeIA } from "@/composables/useTicTacToeIA";
 import Tablero from "@/components/Tablero.vue";
 import Marcador from "@/components/Marcador.vue";
 import BotonesJuego from "@/components/BotonesJuego.vue";
+import MensajeResultado from "@/components/MensajeResultado.vue";
 
 const {
   tablero,
@@ -20,7 +21,7 @@ const {
 <template>
   <div class="container text-center mt-4">
     <div class="game-wrapper">
-      <!-- 🔹 Marcador -->
+      <!-- Marcador -->
       <Marcador
         :puntosX="puntosX"
         :puntosO="puntosO"
@@ -32,24 +33,17 @@ const {
       <!-- Tablero de juego -->
       <Tablero :tablero="tablero" :jugar="jugar" />
 
-      <!-- 🔹 Contenedor de botones -->
+      <!-- Contenedor de botones -->
       <BotonesJuego :reiniciar-juego="reiniciarJuego" />
 
-      <!-- 🔹 Mensaje de ganador o empate -->
-      <div v-if="ganador || empate" class="message-overlay">
-        <div class="winner-message" v-if="ganador">
-          🎉 ¡El jugador {{ ganador }} ha ganado! 🎉
-        </div>
-        <div class="draw-message" v-else-if="empate">
-          🤝 ¡Empate! Nadie ha ganado. 🤝
-        </div>
-      </div>
+      <!-- Mensaje de ganador o empate -->
+      <MensajeResultado :ganador="ganador" :empate="empate" />
     </div>
   </div>
 </template>
 
 <style scoped>
-/* 🔹 Contenedor del juego */
+/* Contenedor del juego */
 .game-wrapper {
   display: flex;
   flex-direction: column;
@@ -58,39 +52,7 @@ const {
   position: relative;
 }
 
-/* 🔹 Mensaje de ganador/empate */
-.message-overlay {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #8bc3ff;
-  text-shadow: 0 0 10px #8bc3ff, 0 0 20px #8bc3ff;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  border-radius: 10px;
-  animation: glow 1.5s infinite alternate;
-}
-
-/* .winner-message,
-.draw-message {
-} */
-
-/* 🔹 Efecto de brillo */
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #8bc3ff, 0 0 20px #8bc3ff;
-  }
-  to {
-    text-shadow: 0 0 20px #8bc3ff, 0 0 40px #8bc3ff;
-  }
-}
-
-/* 🔹 Responsividad */
+/* Responsividad */
 @media (max-width: 1200px) {
   .winner-message,
   .draw-message {

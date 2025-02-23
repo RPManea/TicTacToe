@@ -58,10 +58,10 @@ button:hover {
 
 @media (max-width: 1200px) {
   .scoreboard {
-    position: static; /* Elimina el posicionamiento absoluto */
+    position: static;
     transform: none;
-    margin-top: 20px; /*  Se mueve debajo de los botones */
-    order: 3; /*  Se coloca después de los botones */
+    margin-top: 20px;
+    order: 3;
   }
 }
 </style>

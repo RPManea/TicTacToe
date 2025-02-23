@@ -86,7 +86,7 @@ export function useTicTacToeIA() {
 
     const tiempoDeEspera = Math.floor(Math.random() * (600 - 200 + 1)) + 200;
     setTimeout(() => {
-      const simboloIA = jugadorEmpieza.value ? "O" : "X"; // IA usa el opuesto del jugador
+      const simboloIA = jugadorEmpieza.value ? "O" : "X";
       const simboloJugador = jugadorEmpieza.value ? "X" : "O";
 
       let mejorMovimiento =
@@ -117,11 +117,10 @@ export function useTicTacToeIA() {
       if (verificarGanador()) {
         ganador.value = simboloIA;
 
-        // 🔹 Corrección de puntos según quién es el jugador y quién la IA
         if (simboloIA === (jugadorEmpieza.value ? "O" : "X")) {
-          puntosO.value++; // IA gana
+          puntosO.value++;
         } else {
-          puntosX.value++; // Jugador gana
+          puntosX.value++;
         }
       } else if (verificarEmpate()) {
         empate.value = true;
@@ -148,11 +147,10 @@ export function useTicTacToeIA() {
     if (verificarGanador()) {
       ganador.value = simboloJugador;
 
-      // 🔹 Corrección de puntos según quién es el jugador y quién la IA
       if (simboloJugador === (jugadorEmpieza.value ? "X" : "O")) {
-        puntosX.value++; // Jugador gana
+        puntosX.value++;
       } else {
-        puntosO.value++; // IA gana
+        puntosO.value++;
       }
     } else if (verificarEmpate()) {
       empate.value = true;

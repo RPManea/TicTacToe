@@ -1,29 +1,52 @@
-# tic-tac-toe
+# Tic-Tac-Toe en Vue 3
 
-This template should help get you started developing with Vue 3 in Vite.
+Aplicación **Tres en Raya (Tic-Tac-Toe)** desarrollada con **Vue 3** como parte de la prueba tecnica.
 
-## Recommended IDE Setup
+🔗 **Demo online:** [Jugar en Netlify](https://tictactoerpetre.netlify.app/)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Tecnologías
 
-## Customize configuration
+- **Vue 3**
+- **Vue Router**
+- **Vite**
+- **Vitest** (pruebas unitarias)
+- **tsparticles** (efectos visuales)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Características principales
 
-## Project Setup
+- **Modo Jugador vs Jugador** (local)
+- **Modo Jugador vs IA** (Minimax con poda alfa-beta)
+- **Sistema de puntuación**
+- **Animaciones y efectos con tsparticles**
+- -**Pruebas unitarias con Vitest**
 
-```sh
+## Instalación
+
+```bash
+git clone https://github.com/RPManea/TicTacToe.git
+cd .\TicTacToe\
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## 🧪 Pruebas unitarias
 
-```sh
-npm run build
+Este proyecto incluye **pruebas unitarias** utilizando **Vitest**
+
+#### Inicialización del estado del juego
+
+#### Reinicio del juego
+
+#### Verificación de ganador
+
+#### Detección de empate
+
+#### Reinicio del marcador
+
+### **Ejecutar las pruebas**
+
+Para ejecutar las pruebas unitarias, usa el siguiente comando:
+
+```bash
+npm run test
 ```
